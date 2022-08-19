@@ -81,18 +81,12 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    final outlinedBorder = !widget.removeOutlineBorder
-        ? OutlineInputBorder(
-        borderSide: BorderSide(
-          color: ColorPalette.primaryColor,
-          width: 1.0,
-        ),
-        borderRadius: const BorderRadius.all(Radius.circular(8)))
-        : null;
+
+
     final outlinedErrorBorder = !widget.removeOutlineBorder
         ? OutlineInputBorder(
         borderSide: BorderSide(
-          color: HexColor("#FC6261"),
+          color: HexColor("90917E"),
           width: 1.0,
         ),
         borderRadius: const BorderRadius.all(Radius.circular(8)))
@@ -100,7 +94,7 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
     final outlinedBorderWithoutSelection = !widget.removeOutlineBorder
         ? OutlineInputBorder(
         borderSide: BorderSide(
-          color: HexColor("#D9E3E3"),
+          color: HexColor("90917E"),
           width: 1.0,
         ),
         borderRadius: BorderRadius.all(Radius.circular(8)))
@@ -119,7 +113,7 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
           textSelectionTheme:
           const TextSelectionThemeData(cursorColor: Colors.black)),
       child: TextFormField(
-        cursorColor: ColorPalette.primaryColor,
+
         enabled: widget.textEnabled,
         readOnly: widget.textIsReadOnly,
         focusNode: widget.focusNode,
@@ -159,32 +153,18 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
           counterText: "",
           enabledBorder: outlinedBorderWithoutSelection,
           disabledBorder: outlinedBorderWithoutSelection,
-          focusedBorder: outlinedBorder,
+
           contentPadding: widget.contentPadding ?? EdgeInsets.all(20),
           errorBorder: outlinedErrorBorder,
           focusedErrorBorder: outlinedErrorBorder,
           labelText: widget.labelText,
+          focusColor:Colors.green,
 
-          //when giving label style the error style will not work it should be styled in main for default
-          // labelStyle: widget.focusNode!.hasFocus
-          //     ? FontStyle.primary14Medium
-          //     : FontStyle.grey14Medium,
+
           hintStyle: FontStyle.grey14Regular,
           hintText: widget.hintText,
           prefix: widget.prefix,
           suffixIcon:
-          //  widget.isObscure
-          // ? IconButton(
-          //     icon: Icon(
-          //       Icons.remove_red_eye_outlined,
-          //       color:
-          //           enableObscure ? Colors.black : ColorPalette.primaryColor,
-          //     ),
-          //     onPressed: () => setState(() {
-          //       enableObscure = !enableObscure;
-          //     }),
-          //   )
-          // :
           widget.suffixIcon,
         ),
       ),
