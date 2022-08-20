@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sampleauthroll/common/fontstyle.dart';
-import '../../utils/colorpalette.dart';
+import '../../utils/hexcolor.dart';
 
 class CommonTextFormField extends StatefulWidget {
   final String? labelText;
   final String? hintText;
-  final String? hintText2;
   final TextInputType? inputType;
   final Function? validator;
   final Function? onTap;
@@ -38,37 +37,36 @@ class CommonTextFormField extends StatefulWidget {
 
   const CommonTextFormField(
       {Key? key,
-        this.hintText,
-        this.labelText,
-        this.prefix,
-        this.inputType,
-        this.keyboardType,
-        this.validator,
-        this.hintFontStyle,
-        this.onTap,
-        this.onEditingComplete,
-        this.autoFocus = false,
-        this.isObscure = false,
-        this.onSaved,
-        this.onChanged,
-        this.inputAction,
-        this.inputFormatters,
-        this.controller,
-        this.maxLength,
-        this.maxLines,
-        this.defaultFont = true,
-        this.prefixIcon,
-        this.contentPadding,
-        this.suffixIcon,
-        this.focusNode,
-        this.customIcon,
-        this.textEnabled = true,
-        this.textIsReadOnly = false,
-        this.hintText2,
-        this.addressHintStyle = false,
-        this.disableFocusNode = false,
-        this.removeOutlineBorder = false,
-        this.prefixIconWidth})
+      this.hintText,
+      this.labelText,
+      this.prefix,
+      this.inputType,
+      this.keyboardType,
+      this.validator,
+      this.hintFontStyle,
+      this.onTap,
+      this.onEditingComplete,
+      this.autoFocus = false,
+      this.isObscure = false,
+      this.onSaved,
+      this.onChanged,
+      this.inputAction,
+      this.inputFormatters,
+      this.controller,
+      this.maxLength,
+      this.maxLines,
+      this.defaultFont = true,
+      this.prefixIcon,
+      this.contentPadding,
+      this.suffixIcon,
+      this.focusNode,
+      this.customIcon,
+      this.textEnabled = true,
+      this.textIsReadOnly = false,
+      this.addressHintStyle = false,
+      this.disableFocusNode = false,
+      this.removeOutlineBorder = false,
+      this.prefixIconWidth})
       : super(key: key);
 
   @override
@@ -81,34 +79,34 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    final outlinedBorder = !widget.removeOutlineBorder
-        ? OutlineInputBorder(
+    final underLineBorder = !widget.removeOutlineBorder
+        ? UnderlineInputBorder(
         borderSide: BorderSide(
-          color: ColorPalette.primaryColor,
-          width: 1.0,
+          color: HexColor("#0785f4"),
+          width: 2.0,
         ),
-        borderRadius: const BorderRadius.all(Radius.circular(8)))
+       )
         : null;
-    final outlinedErrorBorder = !widget.removeOutlineBorder
-        ? OutlineInputBorder(
-        borderSide: BorderSide(
-          color: HexColor("#FC6261"),
-          width: 1.0,
-        ),
-        borderRadius: const BorderRadius.all(Radius.circular(8)))
+    final underLineErrorBorder = !widget.removeOutlineBorder
+        ? UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: HexColor("#FC6261"),
+              width: 1.0,
+            ),
+           )
         : null;
-    final outlinedBorderWithoutSelection = !widget.removeOutlineBorder
-        ? OutlineInputBorder(
-        borderSide: BorderSide(
-          color: HexColor("#D9E3E3"),
-          width: 1.0,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(8)))
+    final underlineBorderWithoutSelection = !widget.removeOutlineBorder
+        ? UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: HexColor("#D9E3E3"),
+              width: 1.0,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(8)))
         : null;
     return Theme(
       data: ThemeData(
           hintColor: HexColor('#696969'),
-          primarySwatch: ColorPalette.materialPrimary,
+          primarySwatch: Colors.blue,
           fontFamily: FontStyle.themeFont,
           brightness: Brightness.light,
           appBarTheme: const AppBarTheme(
@@ -117,9 +115,9 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
                   statusBarIconBrightness: Brightness.light,
                   statusBarBrightness: Brightness.dark)),
           textSelectionTheme:
-          const TextSelectionThemeData(cursorColor: Colors.black)),
+              const TextSelectionThemeData(cursorColor: Colors.black)),
       child: TextFormField(
-        cursorColor: ColorPalette.primaryColor,
+        cursorColor: Colors.blue,
         enabled: widget.textEnabled,
         readOnly: widget.textIsReadOnly,
         focusNode: widget.focusNode,
@@ -127,14 +125,14 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
         textInputAction: widget.inputAction,
         keyboardType: widget.inputType,
         controller: widget.controller,
-        style: FontStyle.black14MediumW400,
+        style: FontStyle.black12Medium,
         validator: widget.validator == null
             ? (val) {
-          return null;
-        }
+                return null;
+              }
             : (val) => widget.validator!(val),
         onChanged: widget.onChanged ??
-                (val) {
+            (val) {
               if (widget.controller!.text.isNotEmpty) {
                 enableLabel.value = true;
               } else {
@@ -150,42 +148,25 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
         textAlign: TextAlign.left,
         decoration: InputDecoration(
           prefixIconConstraints:
-          BoxConstraints(maxWidth: widget.prefixIconWidth ?? 55),
+              BoxConstraints(maxWidth: widget.prefixIconWidth ?? 55),
           isDense: false,
           prefixIcon: widget.prefixIcon,
           icon: widget.customIcon,
           // floatingLabelBehavior: FloatingLabelBehavior.always,
-          border: outlinedBorderWithoutSelection,
+          border: underlineBorderWithoutSelection,
           counterText: "",
-          enabledBorder: outlinedBorderWithoutSelection,
-          disabledBorder: outlinedBorderWithoutSelection,
-          focusedBorder: outlinedBorder,
-          contentPadding: widget.contentPadding ?? EdgeInsets.all(20),
-          errorBorder: outlinedErrorBorder,
-          focusedErrorBorder: outlinedErrorBorder,
+          enabledBorder:underlineBorderWithoutSelection,
+          disabledBorder: underlineBorderWithoutSelection,
+          contentPadding: widget.contentPadding ?? const EdgeInsets.all(20),
+          errorBorder: underLineErrorBorder,
+          focusedBorder: underLineBorder,
+          focusedErrorBorder: underLineErrorBorder,
           labelText: widget.labelText,
-
-          //when giving label style the error style will not work it should be styled in main for default
-          // labelStyle: widget.focusNode!.hasFocus
-          //     ? FontStyle.primary14Medium
-          //     : FontStyle.grey14Medium,
-          hintStyle: FontStyle.grey14Regular,
+          labelStyle: FontStyle.blue14Medium,
+          hintStyle: FontStyle.grey12Medium_556879,
           hintText: widget.hintText,
           prefix: widget.prefix,
-          suffixIcon:
-          //  widget.isObscure
-          // ? IconButton(
-          //     icon: Icon(
-          //       Icons.remove_red_eye_outlined,
-          //       color:
-          //           enableObscure ? Colors.black : ColorPalette.primaryColor,
-          //     ),
-          //     onPressed: () => setState(() {
-          //       enableObscure = !enableObscure;
-          //     }),
-          //   )
-          // :
-          widget.suffixIcon,
+          suffixIcon: widget.suffixIcon,
         ),
       ),
     );

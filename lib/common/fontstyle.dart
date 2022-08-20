@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utils/colorpalette.dart';
+import '../utils/hexcolor.dart';
 
 class FontStyle {
   static const themeFont = "Lexend";
@@ -46,10 +46,6 @@ class FontStyle {
   );
   static TextStyle red11Regular = TextStyle(
       fontSize: 11, fontWeight: FontWeight.w400, color: HexColor('#FF6464'));
-  static TextStyle slightDarkGrey11Regular = TextStyle(
-      fontSize: 11,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.slightDarkGrey);
   static TextStyle blue11Medium_7787FF = TextStyle(
       fontSize: 11, fontWeight: FontWeight.w500, color: HexColor('#7787FF'));
   static TextStyle regular11Red = TextStyle(
@@ -70,10 +66,6 @@ class FontStyle {
       fontSize: 12, fontWeight: FontWeight.w500, color: HexColor('#556879'));
   static TextStyle grey12Regular_556879 = TextStyle(
       fontSize: 12, fontWeight: FontWeight.w400, color: HexColor('#556879'));
-  static TextStyle dimGrey12Regular = TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.dimGrey);
   static TextStyle shadeGrey12Regular = TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w400,
@@ -90,10 +82,7 @@ class FontStyle {
       fontSize: 12,
       fontWeight: FontWeight.w500,
       color: HexColor('##2AD16A'));
-  static TextStyle primary12Regular = TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.primaryColor);
+
   static TextStyle red12Regular = TextStyle(
       fontSize: 12, fontWeight: FontWeight.w400, color: HexColor('#FF6464'));
   static TextStyle grey12Regular_8A9CAC = TextStyle(
@@ -110,102 +99,15 @@ class FontStyle {
       fontSize: 12, fontWeight: FontWeight.w300, color: HexColor('#FF5F5F'));
   static TextStyle regular12_6E6E6E = TextStyle(
       fontSize: 12, fontWeight: FontWeight.w400, color: HexColor('#6E6E6E'));
+//13
+  static TextStyle black13Medium400 = TextStyle(
+      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#000000'));
 
-  ///13
-  static TextStyle grey_6E6E6E_13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#6E6E6E'));
-  static TextStyle grey_696969_13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#696969'));
-  static TextStyle grey_8E8E8E_13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#8E8E8E'));
-  static TextStyle grey_6E6E6E_13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: HexColor('#6E6E6E'));
-  static TextStyle grey_556879_13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#556879'));
-  static TextStyle grey_556879_13Strong = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w600, color: HexColor('#556879'));
-  static TextStyle grey_345457_13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#345457'));
-  static TextStyle white13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: Colors.white);
-  static TextStyle black13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: Colors.black);
-  static TextStyle green13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: HexColor('#4FBC16'));
-  static TextStyle green13Regular_36BFB8 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#36BFB8'));
-  static TextStyle black13bold = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w700, color: Colors.black);
-  static TextStyle liteblack13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: HexColor('#2B2B2B'));
-  static TextStyle liteBlack13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#2B2B2B'));
-  static TextStyle black13Regular = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: Colors.black);
-  static TextStyle slightDarkGrey13Regular = TextStyle(
-      fontSize: 13,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.slightDarkGrey);
-  static TextStyle regular13_696969 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#696969'));
-  static TextStyle regular13_556879 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#556879'));
-  static TextStyle regular13_8A9CAC = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#8A9CAC'));
-  static TextStyle grey13Regular_556879 = TextStyle(
-      fontSize: 15, fontWeight: FontWeight.w400, color: HexColor('#556879'));
-  static TextStyle grey13Regular_586876 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#586876'));
-  static TextStyle blue13Regular_2E78C3 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#2E78C3'));
-  static TextStyle grey13Regular_393939 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#393939'));
-  static TextStyle grey13Medium_8A9CAC = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: HexColor('#8A9CAC'));
-  static TextStyle black13SemiBold_393939 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w600, color: HexColor('#393939'));
-  static TextStyle primary13Medium = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w500, color: HexColor('#00CBC0'));
-  static TextStyle black13Medium_212121 = TextStyle(
-      fontSize: 13, fontWeight: FontWeight.w400, color: HexColor('#212121'));
-
-  ///14
-  static TextStyle primary14Medium = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w600, color: HexColor('#00CBC0'));
-  static TextStyle black14MediumW400 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    color: HexColor('#000000'),
-  );
-  static TextStyle grey14Medium = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#696969'));
-  static TextStyle grey14Regular_6E6E = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#6E6E6E'));
-  static TextStyle green14Medium_36BFB8 = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#36BFB8'));
-  static TextStyle primary14Regular = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.primaryColor);
-  static TextStyle slightDarkGrey14Regular = TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.slightDarkGrey);
-  static TextStyle green14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#4FBC16'));
-  static TextStyle orange14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#FF5F5F'));
-
-  static TextStyle black14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#000000'));
-  static TextStyle black14RegularW500 = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#000000'));
+//14
   static TextStyle lightGreyBlack14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#696969'));
-  static TextStyle yellow14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#FD7600'));
+      fontSize: 14, fontWeight: FontWeight.w300, color: HexColor('#696969'));
   static TextStyle black14Medium = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#000000'));
+      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#000000'));
   static TextStyle disable14TextMedium = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#DEDEDE'));
   static TextStyle black14SemiBold = TextStyle(
@@ -213,39 +115,20 @@ class FontStyle {
   static TextStyle grey14Regular_8A9CAC = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#8A9CAC'));
   static TextStyle blue14Medium = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#2680EB'));
+      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#0785f4'));
   static TextStyle white13Medium = TextStyle(
       fontSize: 13, fontWeight: FontWeight.w500, color: Colors.white);
   static TextStyle grey14Regular_464646 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#464646'));
   static TextStyle grey14Medium_464646 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#464646'));
-  static TextStyle dimgrey14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#8A9CAC'));
   static TextStyle black14MediumStrong = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#2B2B2B'));
-
-  // static TextStyle grey14Medium = TextStyle(
-  //     fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#696969'));
-  static TextStyle semiBold14Green = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w600, color: HexColor('#36BFB8'));
-  static TextStyle medium14_282C3F = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#282C3F'));
-  static TextStyle bold14Black = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w700, color: Colors.black);
-  static TextStyle black14Normal = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#111111'));
-  static TextStyle grey14Regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#8A9CAC'));
-  static TextStyle green14Medium = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#00CBC0'));
-  static TextStyle grey14regular = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#556879'));
   static TextStyle red14medium = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#F05656'));
 
   ///15
-  static TextStyle black15Bold = TextStyle(
+  static TextStyle black15Bold = const TextStyle(
       fontSize: 15, fontWeight: FontWeight.w700, color: Colors.black);
   static TextStyle black15SemiBold = TextStyle(
       fontSize: 15, fontWeight: FontWeight.w600, color: Colors.black);
@@ -261,18 +144,7 @@ class FontStyle {
       fontSize: 14, fontWeight: FontWeight.w500, color: HexColor('#333333'));
   static TextStyle white15MediumW600 = TextStyle(
       fontSize: 15, fontWeight: FontWeight.w600, color: HexColor('#FFFFFF'));
-  static TextStyle primary15SemiBold = TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.w700,
-      color: ColorPalette.primaryColor);
-  static TextStyle dimGrey15SemiBold = TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.w700,
-      color: ColorPalette.dimGrey);
-  static TextStyle dimGrey15Regular = TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.w400,
-      color: ColorPalette.dimGrey);
+
   static TextStyle grey15Regular69696 = TextStyle(
       fontSize: 15,
       fontWeight: FontWeight.w400,
@@ -284,6 +156,21 @@ class FontStyle {
       fontWeight: FontWeight.w400,
       color: HexColor('#8A9CAC'),
       decoration: TextDecoration.lineThrough);
+
+  //17
+  static TextStyle white17Medium = TextStyle(
+      fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white);
+  static TextStyle black17Medium = TextStyle(
+      fontSize: 17, fontWeight: FontWeight.w500, color: Colors.black);
+  static TextStyle blue17Medium = TextStyle(
+      fontSize: 17, fontWeight: FontWeight.w500, color: HexColor("#0785f4"));
+
+
+
+  ///22
+  static TextStyle black22Bold800 = const TextStyle(
+      fontSize: 22, fontWeight: FontWeight.w800, color: Colors.black);
+
 
 
 }
