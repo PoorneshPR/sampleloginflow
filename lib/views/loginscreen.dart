@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
     auth.verifyPhoneNumber(phoneNumber: '+91 ${mobileNumController.text}',
-        verificationCompleted: ( phoneAuthCredentials) async {
+        verificationCompleted: ( phoneAuthCredentials) async { 
 
           setState(() {
             showLoading=true;
@@ -195,8 +195,6 @@ class _LoginScreenState extends State<LoginScreen> {
         codeSent: (String verificationID, int? resendToken) {
 
       setState(() {
-        print("verificationIddddd");
-        print(verificationID);
         verificationId=verificationID;
         otpScreenHere=true;
         showLoading=false;
